@@ -1,3 +1,8 @@
+" 编码设置
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
+
 " 启用插件
 set nocompatible
 filetype on
@@ -13,10 +18,10 @@ set expandtab
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " 分屏设置
-map ti :set splitright<CR>:vsplit<CR>  " 向右分屏并把光标移动向右边
-map tn :set nosplitright<CR>:vsplit<CR>  " 向右分屏并把光标移动向左边
-map tu :set nosplitbelow<CR>:split<CR>  " 向下分屏并把光标移动向上边
-map te :set splitbelow<CR>:split<CR>  " 向下分屏并把光标移动向下边
+map td :set splitright<CR>:vsplit<CR>  " 向右分屏并把光标移动向右边
+map ta :set nosplitright<CR>:vsplit<CR>  " 向右分屏并把光标移动向左边
+map ts :set nosplitbelow<CR>:split<CR>  " 向下分屏并把光标移动向上边
+map tw :set splitbelow<CR>:split<CR>  " 向下分屏并把光标移动向下边
 
 " 替换方向键为调节分屏大小
 map <up> :res +5<CR>
@@ -27,10 +32,10 @@ map <right> :vertical resize+5<CR>
 " 按键映射
 map W :w<CR>
 map Q :wq<CR>
-map q :q!<CR>
+map tq :q!<CR>
+map te :terminal<CR>   " 打开终端
 
 " 其他的一些配置 
-set encoding=utf-8     " 设置语言编码
 syntax on   " 语法高亮
 set number      " 显示行号
 set relativenumber    "  把当前所在行的行号向前突出
@@ -238,3 +243,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
