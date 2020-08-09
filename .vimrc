@@ -18,10 +18,14 @@ set expandtab
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " 分屏设置
-map td :set splitright<CR>:vsplit<CR>  " 向右分屏并把光标移动向右边
-map ta :set nosplitright<CR>:vsplit<CR>  " 向右分屏并把光标移动向左边
-map ts :set nosplitbelow<CR>:split<CR>  " 向下分屏并把光标移动向上边
-map tw :set splitbelow<CR>:split<CR>  " 向下分屏并把光标移动向下边
+" 向右分屏并把光标移动向右边
+map td :set splitright<CR>:vsplit<CR>
+" 向右分屏并把光标移动向左边
+map ta :set nosplitright<CR>:vsplit<CR>
+" 向下分屏并把光标移动向上边
+map ts :set nosplitbelow<CR>:split<CR>
+" 向下分屏并把光标移动向下边
+map tw :set splitbelow<CR>:split<CR>
 
 " 替换方向键为调节分屏大小
 map <up> :res +5<CR>
@@ -33,7 +37,7 @@ map <right> :vertical resize+5<CR>
 map W :w<CR>
 map Q :wq<CR>
 map tq :q!<CR>
-map te :terminal<CR>   " 打开终端
+map te :terminal<CR>
 
 " 其他的一些配置 
 syntax on   " 语法高亮
